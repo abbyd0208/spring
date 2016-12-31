@@ -1,8 +1,8 @@
 /*================================layout================================================*/
 /*版型=============================*/
-.header_box{ clear:both; background:url(../images/banner.jpg) repeat-x;}
-.header{ max-width:1400px; height:650px; margin:0 auto; background:url(../images/banner.jpg) center center no-repeat; position:relative; }
-
+.header_box{ width:100%; clear:both; background:url(../images/banner.jpg) center bottom no-repeat; background-size:cover; }
+.header{height:650px; margin:0 auto; position:relative; }
+.header:after{ display:block; content:""; width:100%; height:100%; background:rgba(0,0,0,0.5);}
 
 /*小於768*/
 @media only screen and (max-width:767px){
@@ -25,6 +25,7 @@
 
 /*小於768*/
 @media only screen and (max-width:767px){
+.header_box{ background-position:center left; background-size:cover;}
 .container section .inner{ padding:30px;}
 .container section.style_1 .inner{}
 }
@@ -36,14 +37,16 @@
 
 
 /*選單====================================*/
-.header .nav_1{ width:230px; height:650px; background:rgba(0,0,0,0.8); position:absolute; left:0px; top:0px;}
-.header .nav_1 h1.logo{position:absolute; left:50%; top:50px; margin-left:-42px;}
-.header .nav_1 h1.logo a{ display:block; width:84px; height:285px; background:url(../images/logo.png) center center no-repeat; background-size: 84px auto; text-indent:-9999px; }
-.header h2.logo_spring{ width:50px; height:50px; background:url(../images/logo_spring.png) center center no-repeat; background-size:50px auto; position:absolute; left:50%; margin-left:-25px; bottom:30px;}
-.header p.slogan{ width:80px; height:400px; background:url(../images/slogan.png) center center no-repeat; position:absolute; right:100px; top:100px;}
 
-.header .nav_1 .menu_1{ width:50%; height:130px; padding-top:20px; text-align:center; border-top:2px solid #d7b98e; border-bottom:2px solid #d7b98e; position:absolute; left:50%; margin-left:-25%;/*置中*/ bottom:120px;}
-.header .nav_1 .menu_1 a{ display:block; height:35px; line-height:35px; padding-left:20px; color:#fff; text-align:center; letter-spacing:2px; position:relative;}
+.header h1.logo{ position:absolute; left:50%; top:50px; margin-left:-42px;text-align:center;}
+.header h1.logo a{ display:block; width:84px; height:285px; background:url(../images/logo.png) center center no-repeat; background-size: 84px auto; text-indent:-9999px; }
+.header p.slogan{ width:380px; height:70px; background:url(../images/slogan.png) center center no-repeat; position:absolute; left:50%; margin-left:-190px; bottom:180px; z-index:10;}
+
+.header .nav_1{ width:100%; height:90px; padding-top:32px; background:rgba(0,0,0,0.8); position:absolute; left:0px; bottom:0px;}
+.header .nav_1 .menu_1{ width:370px; margin:0 auto; }
+.header .nav_1 .menu_1 a{ display:block; height:35px; line-height:35px; float:left; margin-right:20px; padding-left:30px; color:#fff; text-align:center; letter-spacing:2px; position:relative;}
+.header .nav_1 .menu_1 a:nth-last-of-type(1){ margin-right:0px;}
+.header .nav_1 .menu_1 a:hover{ color:#c4a476;}
 .header .nav_1 .menu_1 a:before{display:block; content:""; width:25px; height:25px; position:absolute; left:0px; top:2px;}
 .header .nav_1 .menu_1 a:nth-of-type(1):before{ background:url(../images/icon_menu.svg) left top no-repeat; background-size:25px;}
 .header .nav_1 .menu_1 a:nth-of-type(2):before{ background:url(../images/icon_menu.svg) left center no-repeat; background-size:25px;}
@@ -62,7 +65,7 @@
 
 /*小於768*/
 @media only screen and (max-width:767px){
-.header .nav_1{width:100%; height:100%; background:rgba(51,51,51,0.6); position:absolute; left:0px; top:auto; bottom:0px;}
+.header .nav_1{ display:none;}
 .header p.slogan{ display:none;}
 
 .header .nav_1 .menu_1{ display:none;}

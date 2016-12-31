@@ -20,7 +20,7 @@ body { font-family: Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft Jhe
 }
 
 ul{ list-style:none;}
-a{outline: none; /* for Firefox */}
+a{outline: none; /* for Firefox */ transition:all .3s;}
 
 /*預設連結狀態*/
 a:link, a:visited { color:#615133; text-decoration:none; }
