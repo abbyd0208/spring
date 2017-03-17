@@ -44,3 +44,9 @@ $(function(){
 	});
 	
 });
+
+
+//地圖
+$(document).ready(function () {
+	$('iframe[src*="map.htm"]').wrap('<div class="mapcontent" />');
+});
